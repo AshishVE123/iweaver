@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_parent_cardview_params"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/ilIncludeLayout"
+            layout="@layout/layout_common_toolbar"></include>
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_below="@+id/test"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+
+        <!-- ImageVIew to display our Course Image -->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/dp"
+            app:civ_border_color="@color/appColor"
+            app:civ_border_width="2dp" />
+
+        <!-- Text View to display Course Name -->
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/iv_user_image"
+            android:text="@string/signUp_name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_post_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_name"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_toEndOf="@id/iv_user_image"
+            android:fontFamily="@font/sfprodisplayregular"
+            android:textColor="@color/textcolor_light" />
+
+
+        <!-- Text VIew to display Course Rating -->
+        <!-- Image used in present in drawable folder -->
+        <TextView
+            android:id="@+id/tv_user_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_post_time"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@id/iv_user_image"
+            android:fontFamily="@font/sfprodisplayregular"
+            android:textColor="@color/textcolor_light"
+            android:textSize="18sp" />
+
+
+
+
+            <com.social.iweaver.customui.TouchImageView
+                android:id="@+id/vp_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="390dp"
+                android:layout_below="@+id/tv_user_post"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rounded_outlet"
+                android:clipToOutline="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/dp"></com.social.iweaver.customui.TouchImageView>
+
+
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/vp_post_image"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_heart"></ImageView>
+
+
+        <TextView
+            android:id="@+id/tv_post_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vp_post_image"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/iv_like"
+            android:layout_toRightOf="@+id/iv_like"
+            android:gravity="center|bottom"
+            android:text="50"
+            android:textColor="@color/textcolor_light"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/vp_post_image"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tv_post_like_count"
+            android:src="@drawable/ic_comment"></ImageView>
+
+        <TextView
+            android:id="@+id/tv_post_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vp_post_image"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/iv_comment"
+            android:layout_toRightOf="@+id/iv_comment"
+            android:gravity="center_horizontal"
+            android:text="50"
+            android:textColor="@color/textcolor_light"
+            android:textSize="14sp" />
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+</RelativeLayout>

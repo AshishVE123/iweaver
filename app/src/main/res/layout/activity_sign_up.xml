@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.SignUpActivity"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/layout_include"
+            layout="@layout/layout_common_toolbar"></include>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_logo_icon"
+            android:layout_width="0dp"
+            android:src="@drawable/ic_app_logo"
+            android:layout_weight=".7"
+            android:layout_height="90dp">
+        </androidx.appcompat.widget.AppCompatImageView>
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:boxStrokeColor="#FFF"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+
+            app:passwordToggleEnabled="false"
+
+            app:startIconDrawable="@drawable/ic_user">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/et_style"
+                android:drawableStart="@drawable/ic_password"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="@string/signUp_name"
+                android:shadowColor="@color/white"
+                android:textColor="@color/textcolor_light"
+                android:textColorHint="@color/textcolor_light"></androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:boxStrokeColor="#FFF"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+
+            app:passwordToggleEnabled="false"
+
+            app:startIconDrawable="@drawable/ic_email">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/et_style"
+                android:drawableStart="@drawable/ic_password"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="@string/login_email"
+                android:shadowColor="@color/white"
+                android:textColor="@color/textcolor_light"
+                android:textColorHint="@color/textcolor_light"></androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".4"
+            app:ccp_textSize="15sp"
+            app:ccpDialog_textColor="@color/textcolor_light"
+            android:gravity="center"
+            android:background="@drawable/et_style"
+            android:onClick="onCountryPickerClick"
+             />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:boxStrokeColor="#FFF"
+            app:boxStrokeWidth="0dp"
+            android:layout_weight=".6"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="false"
+            app:startIconDrawable="@drawable/ic_phone">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:inputType="number"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/et_style"
+                android:drawableStart="@drawable/ic_password"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="@string/signUp_enter_mobile"
+                android:shadowColor="@color/white"
+                android:textColor="@color/textcolor_light"
+                android:textColorHint="@color/textcolor_light"></androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:boxStrokeColor="#FFF"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/et_style"
+                android:drawableStart="@drawable/ic_password"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="@string/login_password"
+                android:shadowColor="@color/white"
+                android:textColor="@color/textcolor_light"
+                android:textColorHint="@color/textcolor_light"></androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:boxStrokeColor="#FFF"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/et_style"
+                android:drawableStart="@drawable/ic_password"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="@string/signUp_confirm_password"
+                android:shadowColor="@color/white"
+                android:textColor="@color/textcolor_light"
+                android:textColorHint="@color/textcolor_light"></androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.AppTheme.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_style"
+            app:boxStrokeColor="#FFF"
+            app:endIconMode="custom"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="false"
+            app:endIconDrawable="@drawable/ic_calendare"
+            app:startIconDrawable="@drawable/ic_calendare">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_dateofbirth_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="0dp"
+                android:textCursorDrawable="@null"
+                android:background="@drawable/et_style"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:hint="@string/signUp_date_of_birth"
+                android:shadowColor="@color/white"
+                android:textColor="@color/textcolor_light"
+                android:textColorHint="@color/textcolor_light"></androidx.appcompat.widget.AppCompatEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/radioGroup"
+                android:text="Select Gender"
+                android:padding="10dp"
+                android:textColor="@color/textcolor_light"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+              >
+
+                <!--adding a radio button -->
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:buttonTint="@color/teal_200"
+                    android:text="@string/signUp_gender_male"
+                    android:textColor="@color/textcolor_light"
+                    android:fontFamily="@font/sfprodisplayregular"
+                    android:textAlignment="center"
+                    />
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:buttonTint="@color/teal_200"
+                    android:text="@string/signUp_gender_female"
+                    android:textColor="@color/textcolor_light"
+                    android:fontFamily="@font/sfprodisplayregular"
+                    android:textAlignment="center"
+                    />
+
+
+
+
+
+            </RadioGroup>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_calendar"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:weightSum="1"
+            android:layout_height="wrap_content">
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:padding="15dp"
+                android:background="@color/background"
+                android:theme="@style/CalenderViewCustom"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:weightSum="1"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_signUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight=".8"
+            android:background="@drawable/bt_style"
+            android:gravity="center"
+            android:text="@string/signUp_submit"
+            android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:weightSum="1"
+    android:padding="10dp"
+    android:layout_gravity="left"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/sfprodisplayregular"
+        android:text="@string/signUp_already_member"
+        android:textColor="@color/textcolor_light"></androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_signIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/sfprodisplaybold"
+        android:layout_toRightOf="@+id/tv_info_text"
+        android:text="@string/login_signin"
+        android:textColor="@color/signup"></androidx.appcompat.widget.AppCompatTextView>
+
+
+
+</LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

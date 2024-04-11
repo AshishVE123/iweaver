@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".activity.CommentActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_include"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/include_layout"
+            layout="@layout/layout_common_toolbar">
+
+        </include>
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_list_params"
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_below="@+id/ll_include"
+            android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment_list"
+            android:paddingBottom="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+        <EditText
+            android:id="@+id/et_add_comment"
+            android:layout_width="0dp"
+            android:hint="Type your comment"
+            android:layout_weight=".7"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/et_style"
+            android:layout_height="40dp"></EditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_submit_comment"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:layout_marginLeft="5dp"
+            android:text="submit"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:background="@drawable/bt_style"
+            android:layout_height="wrap_content"></androidx.appcompat.widget.AppCompatButton>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

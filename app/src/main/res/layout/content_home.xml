@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".activity.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_login_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/dp"
+            app:civ_border_color="@color/appColor"
+            app:civ_border_width="2dp" />
+
+        <EditText
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:inputType="none"></EditText>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_post"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="0dp"
+            android:background="@drawable/et_style"
+            android:focusable="false"
+            android:fontFamily="@font/sfprodisplayregular"
+            android:gravity="left|center"
+            android:hint="What do you feel today ?"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textcolor_light"
+            android:textSize="18sp"></androidx.appcompat.widget.AppCompatEditText>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplaybold"
+            android:text="Feed You May Like"
+            android:textColor="@color/black"
+            android:textSize="16sp"></androidx.appcompat.widget.AppCompatTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <!-- <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+       <!-- </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>>-->
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

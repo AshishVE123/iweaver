@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog_corner"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_app_logo"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/tv_detailMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textSize="19sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_okayBtn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/sfprodisplaybold"
+                android:background="@drawable/bt_style"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Okey"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

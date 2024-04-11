@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "564524458287",
+    "project_id": "i-weaver-bd4f8",
+    "storage_bucket": "i-weaver-bd4f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564524458287:android:d87ae4554a7ee9893b01da",
+        "android_client_info": {
+          "package_name": "com.social.iweaver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY-D5835fjg1MTBCfIcK82mdWhoedZlXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

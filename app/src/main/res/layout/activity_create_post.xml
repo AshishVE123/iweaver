@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.CreatePostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include_common_tool_param"
+            layout="@layout/layout_common_toolbar">
+        </include>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_post_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/ic_camera"></androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bt_style"
+                android:text="Share"
+                android:textColor="@color/white"></androidx.appcompat.widget.AppCompatButton>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/idIVCourseImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/dp"
+                app:civ_border_color="@color/appColor"
+                app:civ_border_width="2dp" />
+
+            <EditText
+                android:layout_width="10dp"
+                android:layout_height="40dp"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:inputType="none"></EditText>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/et_user_details"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="0dp"
+                android:focusable="false"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:gravity="left|center"
+                android:hint="What do You Feel ?"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textcolor_light"
+                android:textSize="18sp"></androidx.appcompat.widget.AppCompatTextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_post_params"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_post_text"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/et_style"
+                android:gravity="top|left"
+                android:hint="Share Your Today Thought"
+                android:paddingLeft="10dp">
+
+            </androidx.appcompat.widget.AppCompatEditText>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_image_param"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:elevation="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_share_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="390dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dp">
+
+                </androidx.appcompat.widget.AppCompatImageView>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
